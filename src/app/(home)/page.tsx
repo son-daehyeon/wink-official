@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {useEffect} from "react";
 
@@ -60,9 +60,7 @@ const contentList = [
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
+    AOS.init({duration: 1000});
   });
 
   return (

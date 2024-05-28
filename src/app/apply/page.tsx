@@ -1,15 +1,10 @@
-'use client';
-
 import Image from "next/image";
-
-import useMoveScroll from "@/hook/useMoveScroll";
 
 import rocket from "@/../public/rocket.png";
 import arrow from "@/../public/arrow.svg";
 import title from "@/../public/recruitment_title.png";
 
 export default function Apply() {
-  const { element, onMoveToElement } = useMoveScroll();
   return (
     <>
       <div className="flex flex-col align-center">
@@ -26,12 +21,11 @@ export default function Apply() {
           <div/>
           <Image
             className="absolute bottom-1 lg:bottom-7 animate-bounce h-12 cursor-pointer"
-            onClick={onMoveToElement}
             src={arrow}
             alt={"scroll button"}
           />
         </div>
-        <div className="h-[80px] bg-[#f4f7ff]" ref={element} />
+        <div className="h-[80px] bg-[#f4f7ff]"/>
         <div className="relative w-full">
           <iframe
             className="relative top-0 left-0 w-full h-[800px] bg-[#f4f7ff] border-b border-[#e4e4e4]"
