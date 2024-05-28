@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Content3Props from "@/interfaces/props/Content3Props";
 
-const Content3 = ({subject, title, text, reverse, imageSrc, imageAlt}: Content3Props) => {
+export default function Content3 ({subject, title, text, reverse, imageSrc, imageAlt}: Content3Props) {
   return (
     <div
       className={`flex flex-col-reverse md:flex-row md:justify-center gap-2 md:gap-[80px] ${
@@ -49,5 +49,3 @@ const Content3 = ({subject, title, text, reverse, imageSrc, imageAlt}: Content3P
     </div>
   );
 };
-
-export default Content3;

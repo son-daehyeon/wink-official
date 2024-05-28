@@ -8,7 +8,7 @@ import rocket from "@/../public/rocket.png";
 import arrow from "@/../public/arrow.svg";
 import title from "@/../public/recruitment_title.png";
 
-const Apply = () => {
+export default function Apply() {
   const { element, onMoveToElement } = useMoveScroll();
   return (
     <>
@@ -43,5 +43,3 @@ const Apply = () => {
     </>
   );
 };
-
-export default Apply;

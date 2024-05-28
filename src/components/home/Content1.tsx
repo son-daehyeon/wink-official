@@ -4,7 +4,7 @@ import Content1Props from "@/interfaces/props/Content1Props";
 
 import "aos/dist/aos.css";
 
-const Content1 = ({text1, text2, imageSrc1, imageSrc2}: Content1Props) => {
+export default function Content1({text1, text2, imageSrc1, imageSrc2}: Content1Props) {
   return (
     <div className="flex flex-col md:flex-row gap-12 md:gap-[80px]">
       <div className="flex flex-col gap-[58px]">
@@ -51,5 +51,3 @@ const Content1 = ({text1, text2, imageSrc1, imageSrc2}: Content1Props) => {
     </div>
   );
 };
-
-export default Content1;

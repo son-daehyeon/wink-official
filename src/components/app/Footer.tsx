@@ -25,8 +25,6 @@ const links = [
 ];
 
 export default function Footer() {
-
-
   return (
     <div className="flex flex-col py-20 bg-[#f3f6ff] items-center">
       <div className="flex gap-1 mb-[60px]">
@@ -44,7 +42,7 @@ export default function Footer() {
         ))}
         <li></li>
       </ul>
-      
+
       <p className="font-pretendard text-xl text-[#6B7684]">@ WINK 2023 All rights reserved.</p>
     </div>
   );
