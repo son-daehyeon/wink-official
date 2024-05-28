@@ -1,14 +1,10 @@
-import Image, {StaticImageData} from "next/image";
+import Image from "next/image";
+
+import Content2Props from "@/interfaces/props/Content2Props";
 
 import "aos/dist/aos.css";
 
-interface ContentProps {
-  title: string;
-  imageSrc: StaticImageData;
-  imageAlt: string;
-}
-
-const Content2 = ({ title, imageSrc, imageAlt }: ContentProps) => {
+const Content2 = ({title, imageSrc, imageAlt}: Content2Props) => {
   return (
     <div className="flex flex-col gap-8 md:gap-12 py-[98px] md:py-[198px]">
       <h1 className="font-pretendard text-black font-medium text-4xl md:text-5xl" data-aos="fade-right">

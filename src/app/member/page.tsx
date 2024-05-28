@@ -7,8 +7,6 @@ import UserInfo from "@/interfaces/UserInfo"
 import cloud from "@/../public/cloud_3d.png";
 import icon_profile from "@/../public/profile.png";
 
-import dataJson from "@/../json/data.json";
-
 import styles from "@/styles/Member.module.css";
 
 const Profile = ({ name, intro, github, instagram, blog, profile }: UserInfo) => {

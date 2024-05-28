@@ -7,9 +7,9 @@ import Image from "next/image";
 
 import AOS from "aos";
 
-import Content1 from "@/components/Content1";
-import Content2 from "@/components/Content2";
-import Content3 from "@/components/Content3";
+import Content1 from "@/components/home/Content1";
+import Content2 from "@/components/home/Content2";
+import Content3 from "@/components/home/Content3";
 
 import intro_1 from "@/../public/intro_1.jpg";
 import intro_2 from "@/../public/intro_2.jpg";

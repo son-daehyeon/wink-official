@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import useMoveScroll from "@/util/useMoveScroll";
+import useMoveScroll from "@/hook/useMoveScroll";
 
 import rocket from "@/../public/rocket.png";
 import arrow from "@/../public/arrow.svg";

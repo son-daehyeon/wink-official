@@ -1,22 +1,8 @@
-import Image, {StaticImageData} from "next/image";
+import Image from "next/image";
 
-interface ContentProps {
-  subject: string | null;
-  title: string;
-  text: string;
-  reverse: boolean;
-  imageSrc: StaticImageData;
-  imageAlt: string;
-}
+import Content3Props from "@/interfaces/props/Content3Props";
 
-const Content3 = ({
-  subject,
-  title,
-  text,
-  reverse,
-  imageSrc,
-  imageAlt,
-}: ContentProps) => {
+const Content3 = ({subject, title, text, reverse, imageSrc, imageAlt}: Content3Props) => {
   return (
     <div
       className={`flex flex-col-reverse md:flex-row md:justify-center gap-2 md:gap-[80px] ${

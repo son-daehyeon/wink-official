@@ -1,15 +1,10 @@
-import Image, {StaticImageData} from "next/image";
+import Image from "next/image";
+
+import Content1Props from "@/interfaces/props/Content1Props";
 
 import "aos/dist/aos.css";
 
-interface ContentProps {
-  text1: string;
-  text2: string;
-  imageSrc1: StaticImageData;
-  imageSrc2: StaticImageData;
-}
-
-const Content1 = ({ text1, text2, imageSrc1, imageSrc2 }: ContentProps) => {
+const Content1 = ({text1, text2, imageSrc1, imageSrc2}: Content1Props) => {
   return (
     <div className="flex flex-col md:flex-row gap-12 md:gap-[80px]">
       <div className="flex flex-col gap-[58px]">

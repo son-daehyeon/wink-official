@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/app/Header";
+import Footer from "@/components/app/Footer";
 
 import '@/styles/globals.css';
 

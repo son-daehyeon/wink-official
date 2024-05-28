@@ -1,4 +1,4 @@
-export default interface userInfo {
+export default interface UserInfo {
   name: string;
   intro: string;
   github: string;
