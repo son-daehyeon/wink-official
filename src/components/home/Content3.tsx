@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, {StaticImageData} from "next/image";
 
 interface ContentProps {
   subject: string | null;
@@ -24,9 +24,9 @@ const Content3 = ({
       }`}
     >
       <div className="flex flex-col w-full md:w-[400px]">
-        {subject !== null ? (
+        {subject !== null && (
           <h2 className="font-pretendard text-[#3a70ff] text-2xl md:text-3xl font-medium mt-3 md:mt-6">{subject}</h2>
-        ) : null}
+        )}
 
         <h1
           className={`font-pretendard text-xl md:text-4xl py-1 font-medium ${

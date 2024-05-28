@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,7 +32,7 @@ const navigations = [
 ];
 
 export default function Header() {
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState<number>(0);
 
   const updateScroll = () => {
     setScrollY(window.scrollY);
