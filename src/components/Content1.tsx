@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+
 import "aos/dist/aos.css";
 
 interface ContentProps {
@@ -23,6 +24,7 @@ const Content1 = ({ text1, text2, imageSrc1, imageSrc2 }: ContentProps) => {
             </p>
           ))}
         </h1>
+
         <Image
           data-aos="fade-up"
           className="rounded-3xl w-screen md:w-[400px]"
@@ -30,6 +32,7 @@ const Content1 = ({ text1, text2, imageSrc1, imageSrc2 }: ContentProps) => {
           alt={"Image 1"}
         />
       </div>
+
       <div className="flex flex-col gap-[62px]">
         <Image
           data-aos="fade-left"
@@ -37,6 +40,7 @@ const Content1 = ({ text1, text2, imageSrc1, imageSrc2 }: ContentProps) => {
           src={imageSrc2}
           alt={"Image 2"}
         />
+
         <h3
           className="font-pretendard text-xl md:text-2xl font-medium"
           data-aos="fade-right"

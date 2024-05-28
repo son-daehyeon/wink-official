@@ -1,45 +1,48 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/logo.png";
-import { useEffect, useState } from "react";
 
-function TopBar() {
+import logo from "@/../public/logo.png";
+
+const navigations = [
+  {
+    title: "동아리 소개",
+    href: "/#introduce",
+    mobileHide: true,
+    useLink: false,
+  },
+  {
+    title: "활동 소개",
+    href: "/#activity",
+    mobileHide: true,
+    useLink: false,
+  },
+  {
+    title: "부원 소개",
+    href: "/member",
+    mobileHide: true,
+    useLink: true,
+  },
+  {
+    title: "지원하기",
+    href: "/apply",
+    mobileHide: false,
+    useLink: true,
+  },
+];
+
+export default function Header() {
   const [scrollY, setScrollY] = useState(0);
+
   const updateScroll = () => {
     setScrollY(window.scrollY);
   };
-
-  const navigations = [
-    {
-      title: "동아리 소개",
-      href: "/#introduce",
-      mobileHide: true,
-      useLink: false,
-    },
-    {
-      title: "활동 소개",
-      href: "/#activity",
-      mobileHide: true,
-      useLink: false,
-    },
-    {
-      title: "부원 소개",
-      href: "/member",
-      mobileHide: true,
-      useLink: true,
-    },
-    {
-      title: "지원하기",
-      href: "/apply",
-      mobileHide: false,
-      useLink: true,
-    },
-  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       window.addEventListener("scroll", updateScroll);
     }, 200);
+
     return () => {
       clearInterval(timer);
       window.removeEventListener("scroll", updateScroll);
@@ -85,5 +88,3 @@ function TopBar() {
     </header>
   );
 }
-
-export default TopBar;

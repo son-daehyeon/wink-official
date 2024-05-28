@@ -1,17 +1,17 @@
-import { NextPage } from "next";
-import TopBar from "@/components/TopBar";
-import Footer from "@/components/Footer";
-import Image from "next/image";
-import rocket from "../../public/rocket.png";
-import arrow from "../../public/arrow.svg";
-import useMoveScroll from "@/util/useMoveScroll";
-import title from "../../public/recruitment_title.png";
+'use client';
 
-const Apply: NextPage = () => {
+import Image from "next/image";
+
+import useMoveScroll from "@/util/useMoveScroll";
+
+import rocket from "@/../public/rocket.png";
+import arrow from "@/../public/arrow.svg";
+import title from "@/../public/recruitment_title.png";
+
+const Apply = () => {
   const { element, onMoveToElement } = useMoveScroll();
   return (
     <>
-      <TopBar />
       <div className="flex flex-col align-center">
         <div className="flex flex-col items-center justify-around w-full h-screen bg-[#000000] bg-[url('../../public/apply_bottom.png')] bg-no-repeat bg-left-bottom">
           <Image
@@ -40,7 +40,6 @@ const Apply: NextPage = () => {
           />
         </div>
       </div>
-      <Footer />
     </>
   );
 };

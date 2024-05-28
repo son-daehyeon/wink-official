@@ -1,10 +1,13 @@
-import Footer from "@/components/Footer";
-import TopBar from "@/components/TopBar";
+'use client';
+
 import Image from "next/image";
+
+import cloud from "@/../public/cloud_3d.png";
+import icon_profile from "@/../public/profile.png";
+
+import dataJson from "@/../json/data.json";
+
 import styles from "@/styles/Member.module.css";
-import cloud from "../../public/cloud_3d.png";
-import icon_profile from "../../public/profile.png";
-import dataJson from "../../json/data.json";
 
 interface userInfo {
   name: string;
@@ -16,13 +19,13 @@ interface userInfo {
 }
 
 const Profile = ({
-  name,
-  intro,
-  github,
-  instagram,
-  blog,
-  profile,
-}: userInfo) => {
+                   name,
+                   intro,
+                   github,
+                   instagram,
+                   blog,
+                   profile,
+                 }: userInfo) => {
   const websiteList = [
     [github, "GITHUB"],
     [instagram, "INSTAGRAM"],
@@ -71,7 +74,6 @@ const Profile = ({
 export default function Member() {
   return (
     <>
-      <TopBar />
       <div className="h-16" />
       <div className="flex flex-col items-center">
         <Image
@@ -102,7 +104,6 @@ export default function Member() {
           />
         ))}
       </div>
-      <Footer />
     </>
   );
 }

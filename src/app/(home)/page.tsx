@@ -1,23 +1,27 @@
-import Head from "next/head";
-import TopBar from "@/components/TopBar";
-import AOS from "aos";
-import styles from "@/styles/Home.module.css";
-import "aos/dist/aos.css";
+'use client'
+
 import { useEffect } from "react";
+
+import Link from "next/link";
+import Image from "next/image";
+
+import AOS from "aos";
+
 import Content1 from "@/components/Content1";
 import Content2 from "@/components/Content2";
-import Footer from "@/components/Footer";
 import Content3 from "@/components/Content3";
-import Link from "next/link";
-import intro_1 from "../../public/intro_1.jpg";
-import intro_2 from "../../public/intro_2.jpg";
-import active_0 from "../../public/activity_2022wink.jpg";
-import active_1 from "../../public/activity_winkathon.jpg";
-import active_2 from "../../public/activity_precourse.jpg";
-import active_3 from "../../public/activity_weminar.png";
-import active_4 from "../../public/activity_linked.jpg";
-import active_5 from "../../public/activity_study.jpeg";
-import Image from "next/image";
+
+import intro_1 from "@/../public/intro_1.jpg";
+import intro_2 from "@/../public/intro_2.jpg";
+import active_0 from "@/../public/activity_2022wink.jpg";
+import active_1 from "@/../public/activity_winkathon.jpg";
+import active_2 from "@/../public/activity_precourse.jpg";
+import active_3 from "@/../public/activity_weminar.png";
+import active_4 from "@/../public/activity_linked.jpg";
+import active_5 from "@/../public/activity_study.jpeg";
+
+import styles from "@/styles/Home.module.css";
+import "aos/dist/aos.css";
 
 const contentList = [
   {
@@ -60,23 +64,9 @@ export default function Home() {
       duration: 1000,
     });
   });
+
   return (
     <>
-      <Head>
-        <title>WINK: Web IN Kookmin</title>
-        <meta
-          name="description"
-          content="국민대학교 소프트웨어융합대학 웹 학술 동아리 윙크 😉"
-        />
-        <meta property="og:image" content="/ogImage.png"></meta>
-        <meta
-          name="og:description"
-          content="국민대학교 소프트웨어융합대학 웹 학술 동아리 윙크 😉"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <TopBar />
       <div className={styles.wave}>
         <h1
           className="font-pretendard z-10 text-center font-bold text-3xl md:text-[53px] md:leading-[63.25px]"
@@ -158,7 +148,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
