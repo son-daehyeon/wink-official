@@ -1,15 +1,8 @@
 import {Schema, model, models} from 'mongoose';
 
-interface Member {
-  name: string;
-  intro: string;
-  github: string;
-  instagram: string;
-  blog: string;
-  profile: boolean;
-}
+import MemberInterface from '@/backend/interface/Member'
 
-const memberSchema = new Schema<Member>({
+const memberSchema = new Schema<MemberInterface>({
   name: { type: String },
   intro: { type: String },
   github: { type: String },
