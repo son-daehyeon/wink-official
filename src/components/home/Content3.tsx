@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Content3Props from "@/interfaces/props/Content3Props";
+import Content3Props from "@/interfaces/props/components/home/Content3Props";
 
 export default function Content3 ({subject, title, text, reverse, imageSrc, imageAlt}: Content3Props) {
   return (

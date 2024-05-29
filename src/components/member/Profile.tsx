@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import ProfileProps from "@/interfaces/props/ProfileProps";
+import ProfileProps from "@/interfaces/props/components/member/ProfileProps";
 
 export default function Profile({ member: {name, intro, github, instagram, blog} }: ProfileProps) {
   const websiteList = [

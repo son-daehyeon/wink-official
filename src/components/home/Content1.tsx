@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Content1Props from "@/interfaces/props/Content1Props";
+import Content1Props from "@/interfaces/props/components/home/Content1Props";
 
 import "aos/dist/aos.css";
 
