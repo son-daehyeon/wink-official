@@ -4,5 +4,4 @@ export default interface UserInfo {
   github: string;
   instagram: string;
   blog: string;
-  profile: boolean;
 }
