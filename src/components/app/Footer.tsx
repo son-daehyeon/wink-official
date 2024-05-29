@@ -43,7 +43,7 @@ export default function Footer() {
         <li></li>
       </ul>
 
-      <p className="font-pretendard text-xl text-[#6B7684]">@ WINK 2023 All rights reserved.</p>
+      <p className="font-pretendard text-xl text-[#6B7684]">@ WINK 2024 All rights reserved.</p>
     </div>
   );
 };
