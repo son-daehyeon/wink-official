@@ -1,10 +1,8 @@
 import Image from "next/image";
 
-import UserInfo from "@/interfaces/UserInfo";
+import ProfileProps from "@/interfaces/props/ProfileProps";
 
-import icon_profile from "../../../public/profile.png";
-
-export default function Profile({ name, intro, github, instagram, blog, profile }: UserInfo) {
+export default function Profile({ member: {name, intro, github, instagram, blog} }: ProfileProps) {
   const websiteList = [
     [github, "GITHUB"],
     [instagram, "INSTAGRAM"],
@@ -18,7 +16,7 @@ export default function Profile({ name, intro, github, instagram, blog, profile 
           className="rounded-full border border-gray-300 bg-[#B0C6FF]"
           width={80}
           height={80}
-          src={profile ? `${github}.png` : icon_profile}
+          src={`${github}.png`}
           alt={`${name}'s profile image`}
         />
         <div className="flex flex-col gap-1 justify-center">
