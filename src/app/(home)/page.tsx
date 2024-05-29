@@ -64,7 +64,7 @@ export default function Home() {
   });
 
   return (
-    <>
+    <div>
       <div className={styles.wave}>
         <h1
           className="font-pretendard z-10 text-center font-bold text-3xl md:text-[53px] md:leading-[63.25px]"
@@ -146,6 +146,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ import title from "@/../public/recruitment_title.png";
 
 export default function Apply() {
   return (
-    <>
+    <div>
       <div className="flex flex-col align-center">
         <div className="flex flex-col items-center justify-around w-full h-screen bg-[#000000] bg-[url('../../public/apply_bottom.png')] bg-no-repeat bg-left-bottom">
           <Image
@@ -34,6 +34,6 @@ export default function Apply() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };

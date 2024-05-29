@@ -12,7 +12,7 @@ export default async function Member() {
   const members = await getMembers();
 
   return (
-    <>
+    <div>
       <div className="h-16" />
 
       <div className="flex flex-col items-center">
@@ -45,6 +45,6 @@ export default async function Member() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
