@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Profile from "@/components/member/Profile";
 
-import {getMembers} from "@/actions/Member"
+import {getMembers} from "@/backend/actions/Member"
 
 import cloud from "@/../public/cloud_3d.png";
 

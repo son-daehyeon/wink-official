@@ -1,4 +1,4 @@
-import {Schema, model, models} from 'mongoose';
+import {Schema, model} from 'mongoose';
 
 import MemberInterface from '@/backend/interface/Member'
 
@@ -11,6 +11,6 @@ const memberSchema = new Schema<MemberInterface>({
   profile: { type: Boolean },
 });
 
-const Member = models.Member || model<Member>('Member', memberSchema);
+const Member = model<MemberInterface>('Member', memberSchema);
 
 export default Member;
