@@ -1,4 +1,4 @@
-import {Schema, model} from 'mongoose';
+import {Schema, model, models} from 'mongoose';
 
 import UserInfo from '@/interfaces/UserInfo'
 
@@ -10,6 +10,6 @@ const memberSchema = new Schema<UserInfo>({
   blog: { type: String },
 });
 
-const Member = model<UserInfo>('Member', memberSchema);
+const Member = models.Member || model<UserInfo>('Member', memberSchema);
 
 export default Member;
