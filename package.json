@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^14.2.3",
     "aos": "^2.3.4",
     "dotenv": "^16.4.5",
     "mongoose": "^8.4.0",
