@@ -29,24 +29,22 @@ export default async function Profile({ member: {name, intro, github: nodeId, in
         </div>
       </div>
       <div className="flex w-[340px] h-[58px] pl-5 pr-7 items-center justify-between border-[1.5px] border-[#9DB8FF] rounded-b-lg border-t-0">
-        {websiteList.map((info, index) => {
-          return (
-            <div key={index}>
-              {info[0] !== "" ? (
-                <a
-                  className="font-roboto italic text-[#3A70FF] font-black"
-                  target="_blank"
-                  href={info[0].toString()}
-                  rel="noreferrer"
-                >
-                  {info[1]}
-                </a>
-              ) : (
-                <p className="font-roboto italic text-[#B6CDFF] font-black cursor-default">{info[1]}</p>
-              )}
-            </div>
-          );
-        })}
+        {websiteList.map((info, index) => (
+          <div key={index}>
+            {info[0] !== "" ? (
+              <a
+                className="font-roboto italic text-[#3A70FF] font-black"
+                target="_blank"
+                href={info[0].toString()}
+                rel="noreferrer"
+              >
+                {info[1]}
+              </a>
+            ) : (
+              <p className="font-roboto italic text-[#B6CDFF] font-black cursor-default">{info[1]}</p>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
