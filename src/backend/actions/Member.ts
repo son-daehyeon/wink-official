@@ -1,16 +1,15 @@
-import {connectDb} from "@/backend/util/MongoDb";
-
 import Member from "@/backend/schemas/Member";
 
+import {connectDb} from "@/backend/util/MongoDb";
 import {Cache} from "@/backend/util/Cache";
 
 import GithubProfile from "@/interfaces/GithubProfile";
 
 const githubCache = new Cache<GithubProfile>();
 
-export async function getMembers() {
-  await connectDb();
+connectDb();
 
+export async function getMembers() {
   return await Member.find().exec();
 }
 
