@@ -26,7 +26,6 @@ export default async function Member() {
           Introduction of WINK team members
         </h2>
         <div className="mt-8 mb-[124px] animate-updown-shadow h-2 bg-[#bec7e5] blur rounded-full" />
-        <div />
       </div>
 
       <div className="grid justify-center gap-7 px-10 py-2.5 mb-[110px] grid-cols-[repeat(1,_340px)] 2xl:grid-cols-[repeat(4,_340px)] xl:grid-cols-[repeat(3,_340px)] md:grid-cols-[repeat(2,_340px)]">

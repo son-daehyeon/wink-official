@@ -4,16 +4,17 @@ import { connectDb } from '@/backend/util/MongoDb';
 import { Cache } from '@/backend/util/Cache';
 
 import GithubProfile from '@/interfaces/GithubProfile';
+import UserInfo from '@/interfaces/UserInfo';
 
 const githubCache = new Cache<GithubProfile>();
 
 connectDb();
 
-export async function getMembers() {
+export async function getMembers(): Promise<UserInfo[]> {
   return await Member.find().exec();
 }
 
-export async function getGithubInfo(nodeId: string) {
+export async function getGithubInfo(nodeId: string): Promise<GithubProfile> {
   if (!githubCache.has(nodeId)) {
     const query = `
     {
@@ -37,7 +38,7 @@ export async function getGithubInfo(nodeId: string) {
     const body = await response.json();
     const githubProfile = body['data']['node'];
 
-    githubCache.set(nodeId, githubProfile, 1000 * 60);
+    githubCache.set(nodeId, githubProfile, 1000 * 60 * 5);
   }
 
   return githubCache.get(nodeId);

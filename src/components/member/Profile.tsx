@@ -10,7 +10,7 @@ export default async function Profile({
   const github = await getGithubInfo(nodeId);
 
   const websiteList = [
-    [github.url, 'GITHUB'],
+    [github?.url, 'GITHUB'],
     [`https://instagram.com/${instagram}`, 'INSTAGRAM'],
     [blog, 'BLOG'],
   ];
@@ -22,7 +22,7 @@ export default async function Profile({
           className="rounded-full border border-gray-300 bg-[#B0C6FF]"
           width={80}
           height={80}
-          src={github.avatarUrl}
+          src={github?.avatarUrl}
           alt={`${name}'s profile image`}
         />
         <div className="flex flex-col gap-1 justify-center">
@@ -33,7 +33,7 @@ export default async function Profile({
       <div className="flex w-[340px] h-[58px] pl-5 pr-7 items-center justify-between border-[1.5px] border-[#9DB8FF] rounded-b-lg border-t-0">
         {websiteList.map((info, index) => (
           <div key={index}>
-            {info[0] !== '' ? (
+            {info[0] && info[0] !== '' ? (
               <a
                 className="font-roboto italic text-[#3A70FF] font-black"
                 target="_blank"
