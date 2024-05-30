@@ -4,7 +4,7 @@ import Profile from "@/components/member/Profile";
 
 import {getMembers} from "@/backend/actions/Member"
 
-import cloud from "@/../public/cloud_3d.png";
+import cloud from "@/../public/member/cloud_3d.png";
 
 import styles from "@/styles/Member.module.css";
 

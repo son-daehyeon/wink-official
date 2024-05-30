@@ -11,14 +11,14 @@ import Content1 from "@/components/home/Content1";
 import Content2 from "@/components/home/Content2";
 import Content3 from "@/components/home/Content3";
 
-import intro_1 from "@/../public/intro_1.jpg";
-import intro_2 from "@/../public/intro_2.jpg";
-import active_0 from "@/../public/activity_2022wink.jpg";
-import active_1 from "@/../public/activity_winkathon.jpg";
-import active_2 from "@/../public/activity_precourse.jpg";
-import active_3 from "@/../public/activity_weminar.png";
-import active_4 from "@/../public/activity_linked.jpg";
-import active_5 from "@/../public/activity_study.jpeg";
+import intro_1 from "@/../public/home/intro_1.jpg";
+import intro_2 from "@/../public/home/intro_2.jpg";
+import active_0 from "@/../public/home/activity_2022wink.jpg";
+import active_1 from "@/../public/home/activity_winkathon.jpg";
+import active_2 from "@/../public/home/activity_precourse.jpg";
+import active_3 from "@/../public/home/activity_weminar.png";
+import active_4 from "@/../public/home/activity_linked.jpg";
+import active_5 from "@/../public/home/activity_study.jpeg";
 
 import styles from "@/styles/Home.module.css";
 import "aos/dist/aos.css";
@@ -116,7 +116,7 @@ export default function Home() {
           </h1>
           <div className="flex flex-col gap-[60px] md:gap-[120px]">
             {contentList.map((content, index) => (
-              <Content3
+                <Content3
                 key={index}
                 subject={content.subject}
                 title={content.title}

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import icon_wink from "@/../public/wink_footer_logo.svg";
-import icon_github from "@/../public/wink_github.svg";
-import icon_instagram from "@/../public/wink_instagram.svg";
-import icon_tistory from "@/../public/wink_tistory.svg";
+import icon_wink from "@/../public/footer/wink_footer_logo.svg";
+import icon_github from "@/../public/footer/wink_github.svg";
+import icon_instagram from "@/../public/footer/wink_instagram.svg";
+import icon_tistory from "@/../public/footer/wink_tistory.svg";
 
 const links = [
   {
@@ -19,7 +19,7 @@ const links = [
   },
   {
     id: "tistory",
-    href: "https://cs-kookmin-club.tistory.com/category/WINK-%28Web%26App%29",
+    href: "https://cs-kookmin-club.tistory.com/category/WINK-%28Web%20%26%20App%29",
     icon: icon_tistory,
   },
 ];

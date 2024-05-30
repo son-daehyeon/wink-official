@@ -1,14 +1,14 @@
 import Image from "next/image";
 
-import rocket from "@/../public/rocket.png";
-import arrow from "@/../public/arrow.svg";
-import title from "@/../public/recruitment_title.png";
+import rocket from "@/../public/apply/rocket.png";
+import arrow from "@/../public/apply/arrow.svg";
+import title from "@/../public/apply/recruitment_title.png";
 
 export default function Apply() {
   return (
     <div>
       <div className="flex flex-col align-center">
-        <div className="flex flex-col items-center justify-around w-full h-screen bg-[#000000] bg-[url('../../public/apply_bottom.png')] bg-no-repeat bg-left-bottom">
+        <div className="flex flex-col items-center justify-around w-full h-screen bg-[#000000] bg-[url('../../public/apply/apply_bottom.png')] bg-no-repeat bg-left-bottom">
           <Image
             data-aos="fade-up-right"
             data-aos-once="true"
