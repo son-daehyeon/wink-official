@@ -1,5 +1,5 @@
-import UserInfo from "@/interfaces/UserInfo";
+import UserInfo from '@/interfaces/UserInfo';
 
 export default interface ProfileProps {
-  member: UserInfo,
+  member: UserInfo;
 }

@@ -1,4 +1,4 @@
-import {StaticImageData} from "next/image";
+import { StaticImageData } from 'next/image';
 
 export default interface Content1Props {
   text1: string;

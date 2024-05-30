@@ -1,14 +1,17 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import Content2Props from "@/interfaces/props/components/home/Content2Props";
+import Content2Props from '@/interfaces/props/components/home/Content2Props';
 
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css';
 
-export default function Content2 ({title, imageSrc, imageAlt}: Content2Props) {
+export default function Content2({ title, imageSrc, imageAlt }: Content2Props) {
   return (
     <div className="flex flex-col gap-8 md:gap-12 py-[98px] md:py-[198px]">
-      <h1 className="font-pretendard text-black font-medium text-4xl md:text-5xl" data-aos="fade-right">
-        {title.split("\n").map((txt, index) => (
+      <h1
+        className="font-pretendard text-black font-medium text-4xl md:text-5xl"
+        data-aos="fade-right"
+      >
+        {title.split('\n').map((txt, index) => (
           <p key={index}>
             {txt}
             <br />
@@ -26,4 +29,4 @@ export default function Content2 ({title, imageSrc, imageAlt}: Content2Props) {
       />
     </div>
   );
-};
+}

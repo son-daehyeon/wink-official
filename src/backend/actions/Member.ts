@@ -1,9 +1,9 @@
-import Member from "@/backend/schemas/Member";
+import Member from '@/backend/schemas/Member';
 
-import {connectDb} from "@/backend/util/MongoDb";
-import {Cache} from "@/backend/util/Cache";
+import { connectDb } from '@/backend/util/MongoDb';
+import { Cache } from '@/backend/util/Cache';
 
-import GithubProfile from "@/interfaces/GithubProfile";
+import GithubProfile from '@/interfaces/GithubProfile';
 
 const githubCache = new Cache<GithubProfile>();
 
@@ -28,7 +28,7 @@ export async function getGithubInfo(nodeId: string) {
     const response = await fetch('https://api.github.com/graphql', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${process.env.GITHUB_API_KEY}`,
+        Authorization: `Bearer ${process.env.GITHUB_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query }),
@@ -37,7 +37,7 @@ export async function getGithubInfo(nodeId: string) {
     const body = await response.json();
     const githubProfile = body['data']['node'];
 
-    githubCache.set(nodeId, githubProfile, 1000*60);
+    githubCache.set(nodeId, githubProfile, 1000 * 60);
   }
 
   return githubCache.get(nodeId);

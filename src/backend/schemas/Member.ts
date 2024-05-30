@@ -1,6 +1,6 @@
-import {Schema, model, models} from 'mongoose';
+import { model, models, Schema } from 'mongoose';
 
-import UserInfo from '@/interfaces/UserInfo'
+import UserInfo from '@/interfaces/UserInfo';
 
 const memberSchema = new Schema<UserInfo>({
   name: { type: String },

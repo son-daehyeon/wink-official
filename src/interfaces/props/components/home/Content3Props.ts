@@ -1,4 +1,4 @@
-import {StaticImageData} from "next/image";
+import { StaticImageData } from 'next/image';
 
 export default interface Content3Props {
   subject: string | null;

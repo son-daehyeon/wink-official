@@ -1,16 +1,18 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import {getGithubInfo} from "@/backend/actions/Member";
+import { getGithubInfo } from '@/backend/actions/Member';
 
-import ProfileProps from "@/interfaces/props/components/member/ProfileProps";
+import ProfileProps from '@/interfaces/props/components/member/ProfileProps';
 
-export default async function Profile({ member: {name, intro, github: nodeId, instagram, blog} }: ProfileProps) {
+export default async function Profile({
+  member: { name, intro, github: nodeId, instagram, blog },
+}: ProfileProps) {
   const github = await getGithubInfo(nodeId);
 
   const websiteList = [
-    [github.url, "GITHUB"],
-    [`https://instagram.com/${instagram}`, "INSTAGRAM"],
-    [blog, "BLOG"],
+    [github.url, 'GITHUB'],
+    [`https://instagram.com/${instagram}`, 'INSTAGRAM'],
+    [blog, 'BLOG'],
   ];
 
   return (
@@ -31,7 +33,7 @@ export default async function Profile({ member: {name, intro, github: nodeId, in
       <div className="flex w-[340px] h-[58px] pl-5 pr-7 items-center justify-between border-[1.5px] border-[#9DB8FF] rounded-b-lg border-t-0">
         {websiteList.map((info, index) => (
           <div key={index}>
-            {info[0] !== "" ? (
+            {info[0] !== '' ? (
               <a
                 className="font-roboto italic text-[#3A70FF] font-black"
                 target="_blank"
@@ -41,11 +43,13 @@ export default async function Profile({ member: {name, intro, github: nodeId, in
                 {info[1]}
               </a>
             ) : (
-              <p className="font-roboto italic text-[#B6CDFF] font-black cursor-default">{info[1]}</p>
+              <p className="font-roboto italic text-[#B6CDFF] font-black cursor-default">
+                {info[1]}
+              </p>
             )}
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
