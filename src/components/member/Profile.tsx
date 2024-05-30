@@ -1,11 +1,15 @@
 import Image from "next/image";
 
+import {getGithubInfo} from "@/backend/actions/Member";
+
 import ProfileProps from "@/interfaces/props/components/member/ProfileProps";
 
-export default function Profile({ member: {name, intro, github, instagram, blog} }: ProfileProps) {
+export default async function Profile({ member: {name, intro, github: nodeId, instagram, blog} }: ProfileProps) {
+  const github = await getGithubInfo(nodeId);
+
   const websiteList = [
-    [github, "GITHUB"],
-    [instagram, "INSTAGRAM"],
+    [github.url, "GITHUB"],
+    [`https://instagram.com/${instagram}`, "INSTAGRAM"],
     [blog, "BLOG"],
   ];
 
@@ -16,7 +20,7 @@ export default function Profile({ member: {name, intro, github, instagram, blog}
           className="rounded-full border border-gray-300 bg-[#B0C6FF]"
           width={80}
           height={80}
-          src={`${github}.png`}
+          src={github.avatarUrl}
           alt={`${name}'s profile image`}
         />
         <div className="flex flex-col gap-1 justify-center">
