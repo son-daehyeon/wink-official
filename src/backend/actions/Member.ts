@@ -1,6 +1,7 @@
 import {connectDb} from "@/backend/util/MongoDb";
 
 import Member from "@/backend/schemas/Member";
+
 import GithubProfile from "@/interfaces/GithubProfile";
 
 export async function getMembers() {
