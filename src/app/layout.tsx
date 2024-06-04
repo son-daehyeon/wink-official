@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="국민대학교 소프트웨어융합대학 웹 학술 동아리 윙크 😉" />
-        <meta property="og:image" content="/logo.png"></meta>
+        <meta property="og:image" content="/logo.png" />
         <meta
           name="og:description"
           content="국민대학교 소프트웨어융합대학 웹 학술 동아리 윙크 😉"
@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="text/css"
           rel="stylesheet"
         />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           type="text/css"

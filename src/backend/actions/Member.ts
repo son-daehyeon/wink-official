@@ -3,7 +3,7 @@ import Member from '@/backend/schemas/Member';
 import { connectDb } from '@/backend/util/MongoDb';
 import { Cache } from '@/backend/util/Cache';
 
-import GithubProfile from '@/interfaces/GithubProfile';
+import GithubProfile from '@/backend/interfaces/GithubProfile';
 import UserInfo from '@/interfaces/UserInfo';
 
 const githubCache = new Cache<GithubProfile>();
