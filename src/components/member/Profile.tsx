@@ -31,21 +31,19 @@ export default async function Profile({
         </div>
       </div>
       <div className="flex w-[340px] h-[58px] pl-5 pr-7 items-center justify-between border-[1.5px] border-[#9DB8FF] rounded-b-lg border-t-0">
-        {websiteList.map((info, index) => (
+        {websiteList.map(([url, type], index) => (
           <div key={index}>
-            {info[0] && info[0] !== '' ? (
+            {url && url !== '' ? (
               <a
                 className="font-roboto italic text-[#3A70FF] font-black"
                 target="_blank"
-                href={info[0].toString()}
+                href={url}
                 rel="noreferrer"
               >
-                {info[1]}
+                {type}
               </a>
             ) : (
-              <p className="font-roboto italic text-[#B6CDFF] font-black cursor-default">
-                {info[1]}
-              </p>
+              <p className="font-roboto italic text-[#B6CDFF] font-black cursor-default">{type}</p>
             )}
           </div>
         ))}
