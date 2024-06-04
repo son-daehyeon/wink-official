@@ -20,7 +20,6 @@ import active_3 from '@/../public/home/activity_weminar.png';
 import active_4 from '@/../public/home/activity_linked.jpg';
 import active_5 from '@/../public/home/activity_study.jpeg';
 
-import styles from '@/styles/Home.module.css';
 import 'aos/dist/aos.css';
 
 const contentList = [
@@ -65,7 +64,9 @@ export default function Home() {
 
   return (
     <div>
-      <div className={styles.wave}>
+      <div className="relative flex flex-col items-center justify-center min-h-[calc(100vh-65px)] bg-[#c8d7ff] overflow-hidden gap-8">
+        <div className="absolute left-1/2 min-w-[300vw] min-h-[300vw] bg-white rounded-[45%] bottom-[15vh] animate-[rotate_15s_linear_infinite]"></div>
+        <div className="absolute left-1/2 min-w-[300vw] min-h-[300vw] bg-white opacity-50 rounded-[47%] bottom-[12vh] animate-[rotate_15s_linear_infinite]"></div>
         <h1
           className="font-pretendard z-10 text-center font-bold text-3xl md:text-[53px] md:leading-[63.25px]"
           data-aos="zoom-in"
@@ -78,11 +79,11 @@ export default function Home() {
           우리 안의 새로운 물결 WINK
         </h1>
         <p
-          className="font-pretendard font-bold text-base md:text-xl text-[#3a70ff] z-10 "
+          className="font-pretendard font-bold text-base md:text-xl text-[#3a70ff] z-10"
           data-aos="fade-up"
           data-aos-delay="1000"
         >
-          <Link href={'/apply'}>지원하기 {`>`}</Link>
+          <Link href="/apply">지원하기 {`>`}</Link>
         </p>
       </div>
       <div
@@ -98,7 +99,7 @@ export default function Home() {
           imageSrc2={intro_2}
         />
       </div>
-      <div className="bg-gradient-to-b from-[#c8d7ff] to-[#ffffff] h-[128px] md:h-[260px]" />
+      <div className="bg-gradient-to-b from-[#c8d7ff] to-white h-[128px] md:h-[260px]" />
       <div className="px-5 flex flex-col items-center">
         <Content2
           title={'안녕하세요. 우리는 WINK입니다.'}

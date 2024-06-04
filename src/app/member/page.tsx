@@ -6,8 +6,6 @@ import { getMembers } from '@/backend/actions/Member';
 
 import cloud from '@/../public/member/cloud_3d.png';
 
-import styles from '@/styles/Member.module.css';
-
 export default async function Member() {
   const members = await getMembers();
 
@@ -18,7 +16,7 @@ export default async function Member() {
       <div className="flex flex-col items-center">
         <Image className="animate-updown py-8" src={cloud} alt={'cloud_3d.png'} width={216} />
         <h1
-          className={`font-roboto font-black text-5xl lg:text-8xl text-[#D5DFFD] ${styles.text_border} tracking-wider whitespace-nowrap`}
+          className={`font-roboto font-black text-5xl lg:text-8xl text-[#D5DFFD] text-shadow-border tracking-wider whitespace-nowrap`}
         >
           NEW WAVE IN US
         </h1>
