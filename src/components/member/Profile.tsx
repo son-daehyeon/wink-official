@@ -2,6 +2,8 @@ import Image from 'next/image';
 
 import { getGithubInfo } from '@/backend/actions/Member';
 
+import WebsiteType from '@/enum/WebsiteType';
+
 import ProfileProps from '@/interfaces/props/components/member/ProfileProps';
 
 export default async function Profile({
@@ -9,11 +11,11 @@ export default async function Profile({
 }: ProfileProps) {
   const github = await getGithubInfo(nodeId);
 
-  const websiteList = [
-    [github?.url, 'GITHUB'],
-    [`https://instagram.com/${instagram}`, 'INSTAGRAM'],
-    [blog, 'BLOG'],
-  ];
+  const websiteList = {
+    [WebsiteType.GITHUB]: github?.url,
+    [WebsiteType.INSTAGRAM]: instagram,
+    [WebsiteType.BLOG]: blog,
+  };
 
   return (
     <div>
@@ -31,9 +33,9 @@ export default async function Profile({
         </div>
       </div>
       <div className="flex w-[340px] h-[58px] pl-5 pr-7 items-center justify-between border-[1.5px] border-[#9DB8FF] rounded-b-lg border-t-0">
-        {websiteList.map(([url, type], index) => (
+        {Object.entries(websiteList).map(([type, url], index) => (
           <div key={index}>
-            {url && url !== '' ? (
+            {url ? (
               <a
                 className="font-roboto italic text-[#3A70FF] font-black"
                 target="_blank"
